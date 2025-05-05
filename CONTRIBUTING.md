@@ -252,13 +252,13 @@ If you have any questions as you make edits to the documentation please don't he
 To improve understanding of pull requests "at a glance", we encourage the use of several standardized tags. 
 When opening a pull request, please use at least one of the following prefixes in the title of the pull request:
 
--**[BRK]** for changes which break existing builds or tests
--**[DOC]** for new or updated documentation
--**[ENH]** for enhancements
--**[FIX]** for bug fixes
--**[REF]** for refactoring existing code
--**[STY]** for stylistic changes
--**[TST]** for new or updated tests, and
+- **[BRK]** for changes which break existing builds or tests
+- **[DOC]** for new or updated documentation
+- **[ENH]** for enhancements
+- **[FIX]** for bug fixes
+- **[REF]** for refactoring existing code
+- **[STY]** for stylistic changes
+- **[TST]** for new or updated tests, and
 
 You can also combine the tags!
 If you are updating both a test and some related documentation, you could use **[TST, DOC]**.
