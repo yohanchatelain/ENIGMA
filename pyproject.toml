@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "enigmatoolbox"
+description = "good enigma tools for good people"
+readme = "README.rst"
+requires-python = ">=3.5"
+license = {file = "LICENSE"}
+authors = [
+    {name = "enigmators", email = "saratheriver@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Scientific/Engineering",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.5",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3 :: Only",
+]
+keywords = ["enigma", "surface", "connectivity", "atrophy"]
+dependencies = [
+    "numpy>=1.11.0",
+    "scipy>=0.17.0",
+    "scikit-learn>=0.20.0",
+    "matplotlib>=2.0.0",
+    "vtk>=8.1.0",
+    "nibabel",
+    "pillow",
+    "pandas",
+]
+dynamic = ["version"]
+
+[project.urls]
+Documentation = "https://enigma-toolbox.readthedocs.io"
+"Bug Reports" = "https://github.com/MICA-MNI/ENIGMA/issues"
+Source = "https://github.com/MICA-MNI/ENIGMA"
+Download = "https://github.com/MICA-MNI/ENIGMA/releases/download/v2.0.3/enigmatoolbox-2.0.3.tar.gz"
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "coverage",
+    "pytest-cov",
+    "coveralls",
+]
+
+[tool.setuptools]
+packages = ["enigmatoolbox"]
+include-package-data = true
+zip-safe = false
+
+[tool.setuptools.dynamic]
+version = {attr = "enigmatoolbox._version.__version__"}
+
+[tool.mypy]
+ignore_missing_imports = true
